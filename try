@@ -30,10 +30,31 @@ while True:
 for name in invited_name:
     print(name.title() + ', you are still in the list.')
 for i in range(len(invited_name)):
-    del invited_name[0]
-    i+=1
+    del invited_name[0]     #使用del删除列表的时候会把整个列表的定义都会删除此时输出列表报错，显示没有定义
+    i+=1                    #del删除的时候，如果是先删除小的，那么列表会左移，此时列表的长度会改变，需要注意使用情况
 if len(invited_name) == 0:
     print('true')
 else:
     print('false')
 print(invited_name)
+
+#3-8 放眼世界
+wish_list=['Yunnan', 'Qinghai', 'Japan', 'Xinjiang', 'Europe']
+print(wish_list)
+print(sorted(wish_list))
+print(wish_list)
+print(sorted(wish_list, reverse=True))
+wish_list.reverse()  #列表的reverse和sort没有返回值，输出为None，但是会对列表的元素进行排序
+print(wish_list)
+wish_list.reverse()
+print(wish_list)
+wish_list.sort()
+print(wish_list)
+wish_list.sort(reverse=True)
+print(wish_list)
+
+#3-9 晚餐嘉宾--使用len函数
+print(len(wish_list))
+
+#3-10 尝试使用各个函数
+#略

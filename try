@@ -1,0 +1,39 @@
+#!usr/bin/python3
+# -*- coding: utf-8 -*-
+
+#3-4 嘉宾名单
+invited_name=['Tara', 'John', 'Yoga', 'Money']
+for name in invited_name[:3]:
+    print('i will invited ' + name + ' to have lunch.')
+print(invited_name[3] + ' have no time.')
+
+#3-5修改嘉宾名单
+invited_name[3]='Yuan'
+for name in invited_name:
+    print('i will invited ' + name + ' to have lunch.')
+
+#3-6添加嘉宾
+invited_name.insert(0,'Xiao')
+invited_name.insert(2,'Tian')
+invited_name.append('Hao')
+for name in invited_name:
+    print('i will invited ' + name + ' to have lunch.')
+
+#3-7缩减名单
+print('Sorry to inform that i just invite two people.')
+while True:
+    if len(invited_name) > 2:
+        name = invited_name.pop()
+        print(name + ', i am sorry to inform you i can not invite you to have lunch.')
+    else:
+        break        
+for name in invited_name:
+    print(name.title() + ', you are still in the list.')
+for i in range(len(invited_name)):
+    del invited_name[0]
+    i+=1
+if len(invited_name) == 0:
+    print('true')
+else:
+    print('false')
+print(invited_name)

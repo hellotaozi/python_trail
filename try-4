@@ -7,6 +7,26 @@ for pizza in loved_pizzas:
     print('i like '+pizza+'.')
 print('i really love pizza!')
 
+#切片的使用
+print('first three items:')
+print(loved_pizzas[:2])
+print('middle three items:')
+print(loved_pizzas[1:3])
+print('last three items:')
+print(loved_pizzas[-3:])
+
+#friend_pizzas=loved_pizzas     #使用此方法copy后，任何一个列表更改都会影响到两个列表
+#friend_pizzas=loved_pizzas.copy()   #下面三种方法到拷贝，不会影响到原列表
+#friend_pizzas=loved_pizzas[:]
+friend_pizzas=[x for x in loved_pizzas]
+loved_pizzas.insert(4, 'whatever pizza')
+friend_pizzas.append('chicken pizza')
+
+print('my loved pizza :')
+print(loved_pizzas)
+print('my friend loved pizza:')
+print(friend_pizzas)
+
 #4-2 动物
 animal_types=['Dog', 'cat', 'rabbit', 'duck']
 for animal in animal_types:

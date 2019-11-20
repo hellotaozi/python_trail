@@ -66,3 +66,15 @@ cube=[]
 for i in range(1,11):
     cube.append(cube_lamb(i))
 print(cube)
+
+#4-13自助餐
+simple_foods = ('bread', 'rice', 'fruit', 'meat', 'vegetable')
+for food in simple_foods:  #tuple不支持修改元素值
+    print(food)
+
+new_foods=list(simple_foods)
+new_foods[2]='beaf'
+new_foods[4]='wine'
+simple_foods=tuple(new_foods)
+for food in simple_foods:
+    print(food)
